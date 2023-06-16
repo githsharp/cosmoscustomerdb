@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GYN1w7j0aR7KcmRZo8jRNepTr/7fP3La1bv/SLG1Ikw=",
+  "Source": "HS-CosmosCustomerDB",
+  "BasePath": "_content/HS-CosmosCustomerDB",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

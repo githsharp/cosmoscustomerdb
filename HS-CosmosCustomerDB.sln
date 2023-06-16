@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HS-CosmosCustomerDB", "HS-CosmosCustomerDB\HS-CosmosCustomerDB.csproj", "{0211CC10-E359-47B8-B302-3A5D13B8B1AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CosmosCustomerFunctionApp", "CosmosCustomerFunctionApp\CosmosCustomerFunctionApp.csproj", "{59387286-9602-4C40-B38F-627F067B546B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0211CC10-E359-47B8-B302-3A5D13B8B1AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0211CC10-E359-47B8-B302-3A5D13B8B1AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0211CC10-E359-47B8-B302-3A5D13B8B1AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0211CC10-E359-47B8-B302-3A5D13B8B1AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59387286-9602-4C40-B38F-627F067B546B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59387286-9602-4C40-B38F-627F067B546B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59387286-9602-4C40-B38F-627F067B546B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59387286-9602-4C40-B38F-627F067B546B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54DB99DE-2525-4D3D-AF64-E585E9DF92E2}
+	EndGlobalSection
+EndGlobal
