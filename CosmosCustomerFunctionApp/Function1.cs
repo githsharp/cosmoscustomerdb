@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using HS_CosmosCustomerDB.Data.Entities;
+using Microsoft.Azure.Documents;
+using Microsoft.Azure.Documents.Client;
+//using Microsoft.Azure.WebJobs;
+//using Microsoft.Azure.WebJobs.Extensions.CosmosDB;
+using System.Threading.Tasks;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -21,11 +26,14 @@ namespace CosmosCustomerFunctionApp
         [Function("Function1")]
         public async Task Run([CosmosDBTrigger(
             databaseName: "CosmosCustomerDB",
-            containerName: "Customer",
-            Connection = "https:::localhost:8081",
+            containerName: "Customers",
+            // *** KOMMER INTE ÅT AT LÄGGA IN DENNA CONNSTRING i ms AZURE WEBJOBS EXTENSIONS.COSMOSDB
+            //ConnectionStringSetting = "CosmosDbConnString",
             LeaseContainerName = "leases",
-            CreateLeaseContainerIfNotExists = true)] IReadOnlyList<Customer> input)
+            CreateLeaseContainerIfNotExists = true)] IReadOnlyList<Customer> input,
+            ILogger log)
         {
+
             try
             {
                 if (input != null && input.Count > 0)
@@ -40,15 +48,21 @@ namespace CosmosCustomerFunctionApp
                         }
                         {
                             _logger.LogInformation("Documents modified: " + input.Count);
-                            _logger.LogInformation("First document Id: " + input[0].ContractId);
+                            _logger.LogInformation("First document id: " + input[0].ContractId);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                //_logger.LogError(ex.Message);
+
             }
+
+            // if (input != null && input.Count > 0)
+            //{
+            // - logger.LogInformation("Documents modified: " + input.Count);
+            // _logger.LogInformation("First document Id: " + input[0].Id;
+            //}
         }
     }
 

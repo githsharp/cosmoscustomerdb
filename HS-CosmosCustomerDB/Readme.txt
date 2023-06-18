@@ -15,6 +15,6 @@
 - Det skall gå att lägga till nya kunder. Dessa skall även kunna uppdateras och tas bort.
 - Gränssnittet till applikationen skall skapas som ett web api.
 - Det skall finnas en sökfunktionalitet för att söka på kunder dels på kundens namn men
-även på ansvarig säljare.
+även på ansvarig säljare.sd
 - Det skall finnas en Azure function med en CosmosDBtrigger. Den skall meddela en
 säljare när en ny kund lagts till som säljaren är ansvarig för.
